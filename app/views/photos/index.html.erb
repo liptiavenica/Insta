@@ -1,0 +1,10 @@
+<% @photos.each do |photo| %>
+<h3><%= photo.name %></h3>
+<p>
+<span><%= link_to 'edit', edit_photo_path(photo.id) %><span>
+<span> | </span>
+<span><%= link_to 'delete', photo_path(photo.id), method: "DELETE", data:
+{confirm: 'Delete this photo? '} %><span>
+</p>
+<hr/>
+<% end %>

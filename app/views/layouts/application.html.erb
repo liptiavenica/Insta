@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Insta</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'bootstrap', 'bootstrap.min' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap', 'bootstrap.min' , 'jquery-1.10.2.min' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">INSTA</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+			<li><a href="#">UPLOAD PHOTO</li>
+		  </ul>
+		  
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+<%= yield %>
+</div>
+
+</body>
+</html>
