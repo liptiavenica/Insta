@@ -1,0 +1,16 @@
+<%= form_for @photo do |f| %>
+<%= f.label :Name %>
+<%= f.text_field :name %>
+<%= @photo.errors[:name].first unless @photo.errors[:name].blank? %>
+<br/>
+<%= f.label :Photo %>
+<%= f.file_field :attachment, :multiple => false %>
+<br/>
+<%= image_tag @photo.photo_file_name.url %>
+<%= render "form" %>
+<%= f.submit :submit %>
+<% end %>
+<div>
+<%= link_to "back to index", photos_path %>
+</div>
+
